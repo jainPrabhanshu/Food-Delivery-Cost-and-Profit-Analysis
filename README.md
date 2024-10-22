@@ -51,11 +51,12 @@ The data used for this project was sourced from internal delivery records. It co
 
       - #### **Data Integration**
   
-          - Merge data from different sources (if applicable): For example, combine historical Olympic data with the 2024 dataset to analyze trends.
+          - Merged restaurant details with order records to calculate total profitability per restaurant.
+          - Combined customer and order data to analyze repeat customers and their impact on profitability.
     
       - #### **Data Validation**
 
-          - Check for consistency: Ensure the cleaned data aligns with known facts (e.g., no country has more medals than events they've participated in).
+          - Verified data alignment to ensure that no restaurant or customer had duplicate orders or mismatched payment methods.
 
 ## Steps Followed 
 
@@ -65,10 +66,12 @@ The data used for this project was sourced from internal delivery records. It co
 
 - Step 3 : Created the following measures to extract key statistics from dataset:
 
-    ![image](https://github.com/user-attachments/assets/d8d27d30-7fd4-478f-8594-eb99d0577efc)
+    ![image](https://github.com/user-attachments/assets/a03af638-8b94-4f8d-ac01-9ab8ead4f8f6)
+  
+    ![image](https://github.com/user-attachments/assets/88337f2e-8a03-4c96-8046-ddef3e6632ca)
 
 - Step 4 : Rectified the Relational Model by linking Primary keys, foreign keys and updating table cardinalities.
-    ![image](https://github.com/user-attachments/assets/cf68a58f-3902-450b-a8a9-f5ccaacbc9b8)
+    ![image](https://github.com/user-attachments/assets/6b8f3e50-91ba-426c-be0b-a94d2646e8a9)
 
 - Step 5 : Visualized the dashboard structure based on three key questions:
        
@@ -85,54 +88,55 @@ The data used for this project was sourced from internal delivery records. It co
 - Step 7 : Created three pages to provide different insights to the viewer:
     
     - #### Overview insights
-    - #### Athletes insights
-    - #### Country insights
-    - #### Historical insights
+    - #### Customer Insights
+    - #### Restaurant Performance
+    - #### Time-Series Analysis
 
 - Step 8 : The dashboard was complete with all my target requirements being met. Finally, I linked all the pages using Buttons to facilitate smooth navigation.
 
 - Step 9 : Uploaded the entire Dashboard to PowerBI Service.
 
-## Key Insights from Olympics 2024 Data Analysis
+## Key Insights from the Food Delivery Cost & Profitability Analysis
 
-1. Medal Distribution by Country
-    - The top 5 countries (USA, China, Russia, Japan, and Germany) dominated the medal tally, collectively winning over 50% of the total medals.
-    - Smaller countries like Jamaica and Kenya continue to excel in specific events such as athletics, particularly in sprint and long-distance running.
+1. Restaurant Performance:
+    - The top 3 restaurants generated over 30% of the total profit, demonstrating a clear advantage in customer preference.
+    - Restaurants with higher delivery fees didn’t necessarily have higher profits, suggesting that optimal pricing strategies matter.
 
-2. Gender-Based Analysis
-    - Women athletes contributed nearly 45% of the total medals, showing a growing trend toward gender equality in participation and performance.
-    - Certain events, such as gymnastics and swimming, saw near-equal participation and performance by men and women.
+2. Customer Insights:
+    - Cash on Delivery accounted for 60% of the payment methods, indicating customer preference despite the trend toward online payments.
+    - Peak order times were between 7 PM and 10 PM, with the highest order values recorded on weekends.
 
-3. Most Successful Athletes
-    - Key athletes like Caeleb Dressel (USA, Swimming), Elaine Thompson-Herah (Jamaica, Track), and Simone Biles (USA, Gymnastics) were the most successful, winning multiple gold medals and contributing significantly to their country’s overall success.
+3. Delivery Fee and Profit Correlation:
+    - A moderate positive correlation was found between delivery fees and profit, but high fees led to fewer repeat orders.
+    - Outliers with small orders but high delivery costs reduced overall profitability.
   
-4. Trends Over Time
-    - Analysis of historical data shows an upward trend in the total number of participating countries and athletes, with a record number of women participants in 2024.
-Over the years, the gap between top-performing and developing countries is narrowing, particularly in sports like badminton and wrestling.
+4. Profitability Trends:
+    - Orders with optimized delivery fees and minimal commission charges contributed significantly to profitability.
+    - Restaurants offering discounts saw higher order volumes, but their overall profit margins were lower.
 
-## Challenges Faced During the Olympics 2024 Project
+## Challenges Faced During the Project
 
 1. Data Limitations:
 
-    - Incomplete Data: Some datasets were missing critical information like athlete names or detailed event results, requiring manual data entry or external sources for completion.
-    - Inconsistent Data Formats: Different datasets (e.g., historical data vs. 2024 data) had varying formats for country names, event types, and medal categories, making integration and analysis difficult.
-    - Lack of Real-Time Data: Some real-time data, such as live updates on event results, were not available or lagged, limiting the ability to capture the latest insights.
-  
+    - Incomplete data: Some orders lacked key information such as delivery times or processing fees.
+    - Outliers: Several extreme values needed transformation to avoid skewing the results.  
       
 2. Technical Issues:
 
-    - Data Cleaning Complexity: Handling a large and diverse dataset required extensive data cleaning, particularly with missing values and duplicate records, which was time-consuming.
-    - Performance Bottlenecks: The large size of the dataset sometimes caused Power BI to slow down, especially when applying multiple filters or handling complex visualizations.
-    - Data Merging: Integrating multiple datasets (e.g., historical and 2024 event data) posed technical challenges, such as ensuring alignment of common fields and avoiding data redundancy.
+    - Performance challenges: Complex DAX calculations and large datasets slowed down Power BI during filtering.
+    - Data model alignment: Creating proper relationships between orders, customers, and restaurants required manual adjustments.
+      
+## Future Improvements for the Project
 
-## Future Improvements for Olympics 2024 Data Analysis Project
+1. Real-Time Data Integration: Incorporate live order data feeds to monitor delivery performance and profitability dynamically.
+2. Predictive Analytics: Use machine learning to forecast future profits and identify top-performing restaurants.
+3. Deeper Customer Insights: Expand the dataset to include customer demographics for more targeted analysis.
+4. Advanced Visualizations: Add heat maps to highlight high-profit delivery zones and time-series animations to capture trends over time.
+5. Optimization for Large Data: Improve dashboard performance when handling large datasets by optimizing data models, reducing file size, and incorporating efficient query techniques for smoother user experience.
 
-1. Real-Time Data Integration: Incorporate real-time data feeds to update the dashboard instantly with live event results, medal counts, and athlete performance, offering more dynamic and current insights.
-2. Predictive Analytics: Implement machine learning models to predict future outcomes, such as likely medal winners or country performance trends based on historical and current data.
-3. Deeper Athlete-Level Analysis: Expand the dataset to include more granular data on individual athletes, such as personal best performances, injury history, and seasonal form, for more detailed performance evaluations.
-4. Additional Visualizations: Add interactive and advanced visualizations, such as heat maps to track country-wise performance across regions or animated time-series charts to highlight historical trends in medal counts.
-5. Incorporating Audience and Social Media Data: Integrate social media mentions, audience engagement, and public sentiment analysis to evaluate the popularity of different sports, athletes, and events throughout the Olympics.
-6. Optimization for Large Data: Improve dashboard performance when handling large datasets by optimizing data models, reducing file size, and incorporating efficient query techniques for smoother user experience.
+## Conclusion
+
+The Food Delivery Cost & Profitability Analysis dashboard provides valuable insights into order trends, customer behavior, and restaurant performance. It enables stakeholders to make data-driven decisions by identifying key areas of improvement in delivery strategies, pricing models, and cost optimization.
 
 ## License
 
